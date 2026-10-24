@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fafafa">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; connect-src 'self' blob: data:; img-src 'self' blob: data:; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'">
+  <title>AI 前世身份鉴定</title>
+  <style>
+:root{color-scheme:light;--ink:#253E30;--muted:#788074;--line:#E1E3D8;--green:#527B58;--paper:#F8F7F1;--cream:#EFEFE5;--dark:#2D4B37}*{box-sizing:border-box}html{background:var(--paper)}body{margin:0;color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}button:disabled{opacity:.55;cursor:wait}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #90AA86;outline-offset:5px}[hidden]{display:none!important}.app{max-width:1240px;margin:auto;min-height:100svh;padding:0 60px;display:flex;flex-direction:column}.site-header{display:flex;align-items:center;justify-content:space-between;padding:30px 0 26px;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;text-decoration:none}.brand svg{width:37px;height:37px}.brand strong{display:block;font-size:18px;font-weight:650;letter-spacing:2px;line-height:1.4}.brand small{display:block;font-size:8px;letter-spacing:2.3px;margin-top:3px}.edition-pill{border:1px solid #DDE2D3;padding:8px 14px;border-radius:30px;font-size:10px;letter-spacing:1px;display:flex;align-items:center;gap:7px}.edition-pill i{height:5px;width:5px;background:#62865B;border-radius:50%}main{flex:1;display:flex;align-items:center;justify-content:center;padding:55px 0 40px;min-width:0}.screen{width:100%;text-align:center;animation:appear .4s ease both}.screen:not(.home-screen){max-width:430px;margin:auto;padding:30px;background:#FFFEF9;border:1px solid #E7E9DF;border-radius:38px;box-shadow:0 18px 60px #36482E06}.home-layout{display:grid;grid-template-columns:1fr 1.05fr;grid-template-areas:"copy art" "actions art";align-items:center;column-gap:34px}.home-copy{grid-area:copy;text-align:left;align-self:end;padding:20px 0 0}.eyebrow{display:flex;align-items:center;gap:9px;font-size:8px;letter-spacing:2px;color:var(--muted);margin:0 0 26px;text-transform:uppercase}.eyebrow span{width:20px;height:1px;background:#7B9272}.home-copy h1{font-size:clamp(42px,4.5vw,58px);line-height:1.3;font-weight:520;letter-spacing:-1.9px;margin:0 0 23px}.serif-word{font-family:"Songti SC","Noto Serif CJK SC",SimSun,serif;font-weight:500}.intro{font-size:12px;line-height:2;color:var(--muted);margin:0}.mini-orbit{display:flex;align-items:center;gap:13px;color:#849174;margin-top:30px;font-size:9px}.mini-orbit svg{width:72px;height:30px}.nature-stage{grid-area:art;position:relative;min-width:0}.nature-art{display:block;width:100%;max-height:540px}.art-caption{position:absolute;bottom:4px;right:25px;font-size:7px;letter-spacing:1.8px;color:#8A917F}.home-actions{grid-area:actions;align-self:start;padding-top:32px;text-align:left;max-width:355px}.button{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:54px;border:1px solid var(--dark);background:var(--dark);color:#fff;border-radius:28px;padding:14px 20px;font-size:13px;font-weight:500;transition:background .2s,transform .16s}.button:hover{background:#3F6149}.button:active{transform:scale(.98)}.home-start{justify-content:space-between;min-height:62px;padding-left:24px}.arrow-circle{width:32px;height:32px;border:1px solid #6F8975;border-radius:50%;display:grid;place-items:center;font-size:20px;line-height:1}.home-assurances{display:flex;gap:21px;margin:14px 0 0 4px;color:#7B8475;font-size:9px}.home-assurances span{display:flex;align-items:center;gap:6px}.tiny-leaf{width:10px;height:6px;display:inline-block;border:1px solid #819375;border-radius:100% 0 100% 0;transform:rotate(-20deg)}.tiny-spark{font-style:normal;font-size:14px}.collection-strip{border-top:1px solid var(--line);margin-top:45px;padding:22px 0 5px;display:flex;align-items:center;justify-content:space-between;color:#909585;font-size:9px;letter-spacing:1px}.collection-strip svg{width:75px;height:24px;color:#8FA17F}.collection-strip span:last-child{font-size:7px;letter-spacing:1.5px}footer{color:#91998B;font-size:9px;padding:20px 0 22px}.footer-line{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);padding-top:18px}.support-details{position:relative}.support-details summary{cursor:pointer;white-space:nowrap}.support-details[open]{max-width:340px}.support-details pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:10px}.support-details a{display:block}.text-button{border:0;background:transparent;color:#7F8B78;padding:12px 14px;font-size:11px;cursor:pointer}.secondary{background:transparent;color:var(--ink);border-color:#CDD6C4}.secondary:hover{background:#EEF1E7}h2{font-size:25px;font-weight:550;line-height:1.45;letter-spacing:-.7px;margin:0 0 14px}h3{font-weight:550}.muted,.fine,.phase{color:var(--muted)}.fine{font-size:10px;line-height:1.8;margin:12px 0 0}.camera-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.step{font-size:9px;letter-spacing:1.7px;color:#85917B}.local-tag{display:flex;align-items:center;gap:6px;font-size:9px;color:#86967F}.dot{display:inline-block;width:5px;height:5px;background:#688B5D;border-radius:50%}.viewfinder{position:relative;aspect-ratio:4/5;background:#E6EBDD;border:2px solid #DDE5D3;border-radius:100px 100px 36px 36px;overflow:hidden;transition:border-color .25s}.viewfinder.good{border-color:#7EA56E}.viewfinder video,.viewfinder canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;background:#E5EADD}.viewfinder[data-render=native] canvas{visibility:hidden}.viewfinder[data-render=canvas] video{visibility:hidden}.viewfinder canvas{pointer-events:none}.guide{position:absolute;inset:17% 20%;border:1px dashed #FFFFFFB3;border-radius:48%;pointer-events:none}.camera-badge{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);font-size:9px;white-space:nowrap;color:#fff;background:#233E306E;padding:6px 13px;border-radius:25px}.camera-status{font-size:20px;margin:23px 0 5px}.camera-hint{font-size:11px;color:#7D8874;margin:0;min-height:24px}.camera-settings{margin-top:18px;background:#F3F4EA;border:1px solid #E6E9DC;border-radius:22px;padding:11px 15px;text-align:left}.camera-settings summary{display:flex;justify-content:space-between;font-size:11px;cursor:pointer;list-style:none}.camera-controls{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.camera-controls button{border:1px solid #D9DFD0;border-radius:20px;background:#FFFDF7;padding:7px 10px;color:#65765E;font-size:10px}.camera-info{font-size:10px;color:#95A08C}.camera-settings label select{background:#FCFCF6;color:#546D4C}.success-cover{position:absolute;inset:0;background:#F1F5E9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}.check{width:64px;height:64px;border-radius:50%;background:#E0EAD6;color:#527B58;display:grid;place-items:center;font-size:33px}.success-cover p{font-size:13px;color:#527B58}.stable-track{width:88px;height:4px;border-radius:5px;background:#E5EADD;overflow:hidden;margin:16px auto 10px}.stable-track span{display:block;height:100%;width:0;background:var(--green);transition:width .09s linear}.analysis .eyebrow{justify-content:center;margin-bottom:24px}.spinner{height:100px;width:100px;border:1px solid #DEE5D3;border-top:2px solid #698B5E;border-radius:50%;animation:spin 1.8s linear infinite;margin:32px auto;position:relative}.spinner:before{content:'✳';font-size:52px;line-height:1;position:absolute;inset:0;display:grid;place-items:center;color:#9BAB89}.analysis h2{font-size:22px}.analysis .muted{font-size:11px}.phase{font-size:11px;min-height:24px}.progress-area{text-align:left;margin:32px 0 22px}.progress-label{display:flex;justify-content:space-between;font-size:8px;letter-spacing:1px;color:#8B977F;margin-bottom:10px}.percent{font-size:11px;font-variant-numeric:tabular-nums;color:var(--ink)}.progress-track,.resource-track{height:5px;border-radius:8px;background:#E6EADB;overflow:hidden}.progress-track span,.resource-track span{display:block;height:100%;width:0;background:var(--dark);border-radius:8px}.human-panel{background:#F0F2E7;border:1px solid #E3E8D7;padding:18px;border-radius:26px;text-align:left;margin-top:25px}.human-panel h3{font-size:15px;margin:0 0 6px}.human-panel p{font-size:11px;color:#87917C;line-height:1.7}.puzzle-picture{position:relative;overflow:hidden;border-radius:18px;background:#DEE4D2}.puzzle-picture canvas{display:block;width:100%;height:auto}.puzzle-badge{position:absolute;left:9px;bottom:7px;font-size:7px;letter-spacing:1px;background:#FFFFFAD1;border-radius:10px;padding:3px 7px;color:#61785A}.puzzle-track{margin:17px 0 10px}.puzzle-track input{appearance:none;-webkit-appearance:none;width:100%;height:40px;background:#DCE4D1;border-radius:24px;margin:0;touch-action:pan-y}.puzzle-track input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:46px;height:40px;background:#38573E;border:4px solid #F9FAF2;border-radius:24px;box-shadow:0 2px 5px #0001;cursor:grab}.puzzle-track input::-moz-range-thumb{width:40px;height:34px;background:#38573E;border:3px solid #F9FAF2;border-radius:24px;cursor:grab}.human-panel .fine{text-align:center;font-size:10px}.human-status{font-size:11px;color:#667A59;min-height:18px}.human-panel .button{min-height:45px;margin-top:13px}.human-actions{display:flex;justify-content:center}.human-description{text-align:center;font-size:9px!important;margin-bottom:0}.resource-panel{max-width:360px;text-align:left;border-radius:24px;background:#F0F3E8;border:1px solid #E0E7D5;padding:15px;margin:18px auto}.resource-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px}.resource-heading strong{font-weight:500}.resource-track{margin:11px 0}.resource-track span{transition:width .12s linear}.resource-panel p{font-size:9px;color:#85937B;line-height:1.7;margin:5px 0 0;overflow-wrap:anywhere}.result-lead{font-size:11px;color:#8C977F;margin:0 0 20px}.person-name{font-size:58px;line-height:1.2;font-family:"Songti SC",SimSun,serif;font-weight:500;letter-spacing:1px;margin:0 0 17px}.identity{display:inline-block;background:#ECF0E2;border-radius:22px;padding:6px 14px;color:#788769;font-size:10px}#showEaster{display:block;margin:8px auto 0;font-size:10px}.match{margin:23px 0}.match-label{font-size:10px;color:#8A967E;letter-spacing:1px}.match-value{font-size:37px;font-weight:450;font-variant-numeric:tabular-nums;line-height:1.5}.match-value small{font-size:15px}.fiction{font-size:9px;color:#9BA48F}.report{position:relative;background:#EFF1E5;border:1px solid #E4E8D7;border-radius:28px;padding:22px;text-align:left;overflow:hidden}.report:after{content:'';position:absolute;right:-26px;top:-26px;width:90px;height:90px;border:1px solid #C8D5B84D;border-radius:100% 0 100% 0;transform:rotate(-18deg);pointer-events:none}.report h3{font-size:12px;position:relative;margin:0 0 12px}.report p{font-size:11px;color:#7A866F;line-height:1.95;margin:0}.report .history{padding-top:13px;margin-top:13px;border-top:1px solid #DEE4D1;font-size:10px}.archive-label{font-size:9px;color:#9BA58E;margin:20px 0 3px}.archive{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:1px;color:#89967B;margin-bottom:24px}.result-actions{display:grid;gap:10px}.result-disclaimer{font-size:9px;color:#9AA48E;line-height:1.9;margin-top:22px}.save-preview{margin-top:20px;font-size:11px}.save-preview img{width:100%;display:block;margin-top:10px;border-radius:22px}.error-symbol{height:75px;width:75px;background:#EDF1E3;border-radius:50%;font-size:29px;display:grid;place-items:center;margin:5px auto 25px;color:#8F9E7D}.error-detail{font-size:12px;line-height:1.9;color:#8A967F;white-space:pre-line;overflow-wrap:anywhere;margin-bottom:25px}.error-actions{display:grid;gap:10px}.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#2D4B37;color:#fff;padding:12px 20px;border-radius:30px;max-width:calc(100% - 30px);font-size:12px;z-index:2000;text-align:center}.result-easter{position:fixed;inset:auto;top:var(--card-top,12px);left:var(--card-left,12px);box-sizing:border-box;width:min(360px,calc(100vw - 24px));max-width:360px;max-height:calc(100dvh - 24px);overflow:auto;margin:0;padding:22px;background:#FFFEF8;color:var(--ink);border:1px solid #DEE3D2;border-radius:28px;box-shadow:0 18px 60px #1E332D33;text-align:center}.result-easter:not([open]){display:none}.result-easter[open]{animation:card-burst .16s cubic-bezier(.16,.9,.3,1.12) both}.result-easter::backdrop{background:#253C2C24}.result-easter[data-edge=left]{--enter-x:-110vw;--enter-y:0px}.result-easter[data-edge=right]{--enter-x:110vw;--enter-y:0px}.result-easter[data-edge=top]{--enter-x:0px;--enter-y:-110vh}.result-easter[data-edge=bottom]{--enter-x:0px;--enter-y:110vh}.easter-label{font-size:9px;letter-spacing:2px;text-align:left;color:#8C9C7E;margin:0 30px 15px 0}.easter-image{display:block;width:100%;height:clamp(110px,26vh,210px);object-fit:contain;border-radius:17px;background:#F0F2E7}.easter-quote{font-size:19px;font-weight:550;line-height:1.6;margin:18px 0}.easter-quote span{display:inline-block}.sheet-close{position:absolute;right:10px;top:8px;width:32px;height:32px;border:0;background:#EDF1E3;color:#768866;border-radius:50%;font-size:21px;cursor:pointer}.redirect-progress{height:4px;background:#E1E6D6;border-radius:8px;overflow:hidden;margin:12px 0}.redirect-progress span{display:block;height:100%;background:#416747;width:100%;transition:width .2s linear}.history-link{display:block;text-decoration:none;color:white;background:var(--dark);font-size:11px;padding:12px 8px;border-radius:24px;margin-top:15px}.result-easter .fine{font-size:10px}.result-easter .text-button{margin-top:8px}body:has(.result-easter[open]){overflow:hidden}.verification-detail{display:none}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes card-burst{from{transform:translate(var(--enter-x,0px),var(--enter-y,110vh));opacity:0}to{transform:translate(0,0);opacity:1}}
+@media(min-width:1000px){.home-layout{min-height:510px}.home-copy{padding-bottom:0}.nature-stage{margin-top:-10px}}@media(max-width:760px){.app{padding:0 24px}.site-header{padding:22px 0 18px}.brand svg{width:30px;height:30px}.brand strong{font-size:15px;letter-spacing:1px}.brand small{font-size:6px;letter-spacing:1.7px}.edition-pill{font-size:8px;padding:6px 9px;letter-spacing:.3px}main{padding:34px 0 20px;align-items:flex-start}.home-layout{grid-template-columns:1fr;grid-template-areas:"copy" "art" "actions";gap:0}.home-copy{padding-top:0;text-align:center}.eyebrow{justify-content:center;font-size:7px;letter-spacing:1.7px;margin-bottom:18px}.home-copy h1{font-size:42px;line-height:1.28;letter-spacing:-1.6px;margin-bottom:15px}.intro{font-size:10px;line-height:1.9}.mini-orbit{display:none}.nature-stage{max-width:365px;width:100%;margin:16px auto 0}.nature-art{max-height:340px}.art-caption{bottom:0;right:23px;font-size:5.5px;letter-spacing:1.3px}.home-actions{width:100%;max-width:365px;margin:auto;padding-top:24px}.home-start{min-height:56px;padding:11px 14px 11px 23px;font-size:12px}.home-assurances{justify-content:center;font-size:8px;margin-top:11px}.collection-strip{margin-top:26px;padding:17px 0 4px;font-size:7px;letter-spacing:.5px}.collection-strip svg{width:46px}.collection-strip span:last-child{font-size:5px;letter-spacing:.6px}footer{padding:10px 0 18px}.footer-line{padding-top:13px;flex-wrap:wrap;font-size:7px;gap:8px}.footer-line>span:first-child{display:none}.support-details{margin-left:auto}.screen:not(.home-screen){border-radius:32px;padding:22px;max-width:390px}.viewfinder{border-radius:85px 85px 30px 30px}.person-name{font-size:51px}.analysis .eyebrow{font-size:8px}.report{border-radius:24px}}@media(max-width:360px){.app{padding:0 19px}.home-copy h1{font-size:37px}.nature-art{max-height:285px}.edition-pill{font-size:7px;padding:5px 7px}.brand small{font-size:5.5px}.collection-strip span:last-child{display:none}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition:none!important}.spinner{animation:spin 2s linear infinite!important}}
+/* Result stays readable while the non-modal easter card is open. */
+.result-easter{top:auto;left:max(12px,env(safe-area-inset-left));bottom:calc(12px + env(safe-area-inset-bottom));width:min(360px,calc(100vw - 24px));max-height:35vh;max-height:35dvh;padding:16px 18px;overscroll-behavior:contain;border-radius:24px;z-index:1000}.result-easter[data-side=right]{left:auto;right:max(12px,env(safe-area-inset-right))}.result-easter::backdrop{background:transparent}.result-easter[data-edge=bottom]{--enter-x:0px;--enter-y:45vh}.easter-label{margin-bottom:8px}.easter-image{height:100px}.easter-quote{font-size:17px;margin:10px 0}.history-link{margin-top:10px;padding:9px}.result-easter .fine{margin-top:6px}body:has(.result-easter[open]){overflow:auto}body.easter-visible #result{padding-bottom:calc(35vh + 32px);padding-bottom:calc(35dvh + 32px)}
+.result-easter,.result-easter[data-side=right]{top:var(--card-top,50%);left:var(--card-left,50%);bottom:auto;right:auto}body.easter-visible #result{padding-bottom:30px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="site-header"><a href="./" class="brand" aria-label="前世档案首页"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 31V16M18 22C5 22 3 12 4 6C15 6 21 11 18 22Z" fill="currentColor"/><path d="M18 15C18 5 25 2 32 3C32 12 27 18 18 15Z" fill="currentColor"/><path d="M18 31H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span><strong>前世档案</strong><small>PAST LIFE ATELIER</small></span></a><span class="edition-pill"><i></i> AI 娱乐实验室</span></header>
+  <main>
+    <section id="home" class="screen home-screen" aria-label="首页"><div class="home-layout"><div class="home-copy"><p class="eyebrow"><span></span> A LITTLE FACE. A LONG STORY.</p><h1>你的故事，<br>不止<span class="serif-word">这一世。</span></h1><p class="intro">一次面部检测，一张意想不到的历史名片。<br class="desktop-break">从此刻，遇见另一个时空的你。</p><div class="mini-orbit" aria-hidden="true"><svg viewBox="0 0 130 35" fill="none"><path d="M2 18C20-3 31 39 48 18S77-3 94 18S116 39 128 18" stroke="currentColor"/><circle cx="64" cy="17" r="12" fill="#F7F5EE" stroke="currentColor"/><path d="M64 9V25M56 17H72" stroke="currentColor"/></svg><span>把好奇，留给另一个自己。</span></div></div><div class="nature-stage" aria-hidden="true"><svg class="nature-art" viewBox="0 0 560 570" fill="none"><defs><pattern id="lineField" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#2F5745" stroke-opacity=".11"/></pattern><filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="17" flood-color="#193E2D" flood-opacity=".12"/></filter></defs>
+<rect x="45" y="20" width="455" height="510" rx="112" fill="#E8EBDD"/><path d="M45 380C140 295 249 310 325 380C380 430 435 447 500 416V418C500 480 450 530 388 530H157C95 530 45 480 45 418Z" fill="#C5D3B6"/>
+<path d="M60 432C167 351 211 357 327 418C398 455 431 457 484 445M55 454C163 373 211 379 327 440C394 475 431 477 472 468M68 477C163 403 211 403 318 463C370 492 414 502 448 493" stroke="#FAF7EF" stroke-width="2"/>
+<circle cx="407" cy="102" r="49" fill="#E9C98E"/><circle cx="407" cy="102" r="35" stroke="#F7E7C8"/><path d="M407 44V55M407 149V160M349 102H360M454 102H465" stroke="#AB8951" stroke-width="1.5"/>
+<rect x="4" y="72" width="133" height="158" rx="65" fill="#E1D7C7" transform="rotate(-13 4 72)"/><rect x="4" y="72" width="133" height="158" rx="65" fill="url(#lineField)" transform="rotate(-13 4 72)"/>
+<g filter="url(#softShadow)"><rect x="151" y="107" width="238" height="320" rx="119" fill="#FAF8F1"/><rect x="163" y="119" width="214" height="296" rx="107" stroke="#DFE2D4"/><path d="M214 226V244M326 226V244M273 230V271C273 277 269 281 263 281H254M235 310C253 329 282 329 303 310" stroke="#315C47" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M199 184V177C199 169 205 163 213 163H228M312 163H327C335 163 341 169 341 177V184M199 330V337C199 345 205 351 213 351H228M312 351H327C335 351 341 345 341 337V330" stroke="#A8B69D" stroke-width="2" stroke-linecap="round"/></g>
+<g transform="translate(28 324) rotate(-17)"><path d="M53 153V27" stroke="#315C47" stroke-width="3"/><path d="M52 115C9 115 1 87 5 65C36 63 54 80 52 115Z" fill="#6D8E68"/><path d="M54 92C92 92 112 65 107 44C75 46 55 61 54 92Z" fill="#315C47"/><path d="M52 62C22 60 15 36 20 20C44 22 54 39 52 62Z" fill="#96AA7C"/><path d="M54 38C78 38 86 18 82 3C61 7 51 21 54 38Z" fill="#567C57"/><path d="M9 72L51 112M58 87L101 52M24 27L51 59M58 32L77 10" stroke="#EBEEDD" stroke-width="1.2"/></g>
+<g transform="translate(396 335)"><rect width="149" height="149" rx="43" fill="#315C47"/><circle cx="75" cy="74" r="54" stroke="#A4B495"/><circle cx="75" cy="74" r="43" stroke="#A4B495"/><circle cx="75" cy="74" r="32" stroke="#A4B495"/><circle cx="75" cy="74" r="20" stroke="#A4B495"/><path d="M75 11V137M12 74H138" stroke="#A4B495" stroke-opacity=".4"/><circle cx="75" cy="74" r="6" fill="#E7C48E"/></g>
+<path d="M141 34L145 46L157 50L145 54L141 66L137 54L125 50L137 46Z" fill="#315C47"/><path d="M442 253L448 270L465 276L448 282L442 299L436 282L419 276L436 270Z" stroke="#315C47" stroke-width="1.5"/>
+<g transform="translate(135 473)"><rect width="231" height="57" rx="28.5" fill="#FCFAF4"/><circle cx="29" cy="29" r="15" stroke="#CCD4C2"/><path d="M22 30L27 35L36 23" stroke="#315C47" stroke-width="1.8" stroke-linecap="round"/><text x="53" y="34" fill="#315C47" font-size="12" font-family="sans-serif" letter-spacing="1">EVERY FACE, A NEW STORY.</text></g>
+</svg><span class="art-caption">THE PAST LIFE COLLECTION — 001</span></div><div class="home-actions"><button id="start" class="button home-start">开启我的前世 <span class="arrow-circle" aria-hidden="true">↗</span></button><div class="home-assurances"><span><i class="tiny-leaf"></i> 本地人脸检测</span><span><i class="tiny-spark">✳</i> 随机身份彩蛋</span></div></div></div><div class="collection-strip" aria-hidden="true"><span>面孔是入口，好奇是答案。</span><svg viewBox="0 0 90 24" fill="none"><path d="M1 19L18 4L35 19L52 4L69 19L86 4" stroke="currentColor"/><circle cx="44" cy="12" r="3" fill="currentColor"/></svg><span>EXPLORE YOUR OTHER CHAPTER.</span></div></section>
+    <section id="camera" class="screen" hidden aria-label="面部检测">
+      <div class="camera-top"><span class="step">01 / 面部检测</span><span class="local-tag"><span class="dot"></span> 仅在本地处理</span></div>
+      <div id="viewfinder" class="viewfinder" data-render="native"><video id="video" autoplay muted playsinline webkit-playsinline aria-hidden="true"></video><canvas id="cameraCanvas" width="640" height="480" aria-label="摄像头实时预览"></canvas><div class="guide" aria-hidden="true"></div><span id="cameraBadge" class="camera-badge">请正对镜头 · 保持光线充足</span><div id="successCover" class="success-cover" hidden><div class="check">✓</div><p>面部检测完成</p></div></div>
+      <div role="status" aria-live="polite"><h2 id="cameraStatus" class="camera-status">正在请求摄像头权限</h2><p id="cameraHint" class="camera-hint">请在浏览器提示中允许摄像头访问</p></div>
+      <div id="resourcePanel" class="resource-panel" hidden><div class="resource-heading"><strong id="resourceLabel">正在下载检测资源</strong><span id="resourcePercent">0%</span></div><div id="resourceTrack" class="resource-track" role="progressbar" aria-label="检测资源下载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="resourceBar"></span></div><p id="resourceBytes">0 MB</p><p id="resourceNote">所有资源由当前网站提供，首次约需下载 10 MB。请保持页面打开。</p></div>
+      <div class="stable-track" role="progressbar" aria-label="人脸稳定检测" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="stableTrack"><span id="stableBar"></span></div>
+      <p class="fine">将面部放入框内，保持 1.5 秒。</p>
+      <details class="camera-settings"><summary>相机设置 <span>＋</span></summary>      <div class="camera-controls"><button id="switchCamera">切换前 / 后摄像头</button><button id="retryCamera">重启摄像头</button><button id="compatibleCamera">兼容启动</button><button id="renderCamera">切换预览方式</button></div><label class="fine" style="display:block;margin-top:12px">可用摄像头 <select id="cameraDevice" aria-label="选择摄像头" style="max-width:100%;padding:7px;border:1px solid #ddd;border-radius:8px"><option value="">自动选择</option></select></label><p id="cameraInfo" class="camera-info" role="status">正在启动摄像头</p></details><button id="cancel" class="text-button">取消，返回首页</button>
+    </section>
+    
+    <section id="analysis" class="screen analysis" hidden aria-label="娱乐分析">
+      <p class="eyebrow">02 / 历史档案</p><div id="analysisSpinner" class="spinner" aria-hidden="true"></div><h2>正在分析你的前世身份</h2><p class="muted">正在翻开你的另一段故事</p><p id="phase" class="phase" role="status">正在提取面部特征……</p>
+      <div class="progress-area"><div class="progress-label"><span>GENERATING REPORT</span><span id="percent" class="percent">0%</span></div><div id="analysisTrack" class="progress-track" role="progressbar" aria-label="娱乐报告生成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="analysisBar"></span></div></div>
+      <div id="humanPanel" class="human-panel" hidden><h3>滑动拼图验证</h3><p id="humanPrompt">拖动下方滑块，让拼图与缺口重合，松开完成验证。</p><div class="puzzle-picture"><canvas id="humanPuzzle" width="640" height="336" role="img" aria-label="有一处缺口的风景拼图，请移动滑块补全"></canvas><span class="puzzle-badge">PUZZLE CHECK</span></div><div class="puzzle-track"><input id="humanRange" type="range" min="0" max="100" step="0.1" value="0" aria-label="拖动拼图至缺口，方向键也可调整" aria-describedby="humanPrompt humanRangeValue"></div><div id="humanRangeValue" class="fine">向右拖动滑块 →</div><div id="humanStatus" class="human-status" role="status" aria-live="polite"></div><button id="humanVerify" class="button">确认拼图</button><div class="human-actions"><button id="humanRefresh" class="text-button">换一张拼图</button><button id="humanCancel" class="text-button">取消鉴定</button></div><p class="human-description">拼好这一片，继续探索。</p></div><p class="fine">模拟分析 · 结果随机</p>
+    </section>
+    <section id="result" class="screen" hidden aria-label="鉴定结果">
+      <p class="result-lead">为你翻开的历史名片</p><div id="resultBody" hidden>
+        <h2 id="personName" class="person-name"></h2><span id="identity" class="identity"></span><button id="showEaster" class="text-button">打开身份彩蛋 ↗</button>
+        <div class="match"><div class="match-label">灵魂匹配度</div><div class="match-value"><span id="matchValue"></span><small>%</small></div><div class="fiction">虚构娱乐数值 · 与面部无关</div></div>
+        <article class="report"><h3>这一世的前情提要</h3><p id="reportText"></p><p id="history" class="history"></p></article>
+        <p class="archive-label">前世档案编号</p><p id="archive" class="archive"></p>
+        <p id="verificationMode" class="verification-detail" hidden></p>
+        <div class="result-actions"><button id="restart" class="button">重新鉴定 <span class="arrow" aria-hidden="true">↻</span></button><button id="save" class="button secondary">保存鉴定结果</button></div>
+        <details id="savePreview" class="save-preview" hidden><summary>查看结果图片（可长按保存）</summary><img id="savedImage" alt="前世身份随机娱乐鉴定报告"></details>
+        <p class="result-disclaimer">本结果由随机算法生成，仅供娱乐，<br>不代表真实人物身份或性格判断。</p>
+      </div>
+    </section>
+    <section id="error" class="screen" hidden aria-label="检测失败"><div class="error-symbol" aria-hidden="true">!</div><h2 id="errorTitle">无法访问摄像头</h2><p id="errorDetail" class="error-detail"></p><div class="error-actions"><button id="retry" class="button">重新检测</button><button id="switchAfterError" class="button secondary">切换前 / 后摄像头再试</button><button id="compatAfterError" class="button secondary">使用默认相机兼容启动</button><button id="openChrome" class="button secondary" hidden>用 Chrome 打开</button></div><button id="back" class="text-button">返回首页</button></section>
+  </main>
+  <footer><div class="footer-line"><span>AI 前世身份鉴定</span><span>仅供娱乐 · 结果随机 · 面部数据不上传</span><details class="support-details"><summary>帮助与诊断</summary><p id="securityStatus"></p><pre id="cameraDiagnostics"></pre><button id="copyDiagnostics" class="text-button">复制诊断</button><a href="./" target="_blank" rel="noopener">在浏览器打开 ↗</a></details></div></footer>
+</div>
+<dialog id="resultEaster" class="result-easter" aria-labelledby="resultQuote" aria-describedby="redirectStatus"><button id="dismissEaster" hidden class="sheet-close" aria-label="关闭彩蛋并取消自动跳转">×</button><p class="easter-label">随机彩蛋</p><img id="easterImage" class="easter-image" alt="本条随机彩蛋的配图" hidden><p id="resultQuote" class="easter-quote" aria-label="随机娱乐彩蛋"></p><p id="redirectStatus" class="fine">5 秒后打开人物介绍</p><div class="redirect-progress" aria-hidden="true"><span id="redirectBar"></span></div><a id="historyVideo" class="history-link" rel="noreferrer">立即查看哔哩哔哩人物介绍 ↗</a><button id="stayResult" class="text-button">留在此页，取消跳转</button></dialog>
+<div id="toast" class="toast" hidden role="status"></div>
+
+<noscript><p style="text-align:center">请启用 JavaScript 后使用。此网页需要真实人脸检测。</p></noscript>
+<script>
+
+'use strict';
+// All business logic is in this file. MediaPipe and model assets are local.
+const $=id=>document.getElementById(id);
+const ASSETS=Object.freeze({script:'./vision_bundle.mjs',wasm:'.',model:'./blaze_face_short_range.tflite'});
+const STATES=Object.freeze({HOME:'home',PERMISSION:'permission',MODEL:'model',WAITING:'waiting',MULTIPLE:'multiple',STABLE:'stable',SUCCESS:'success',ANALYSIS:'analysis',HUMAN:'human',RESULT:'result',ERROR:'error'});
+const CAMERA_STATES=new Set(['permission','model','waiting','multiple','stable','success']);
+const DETECT_STATES=new Set(['waiting','multiple','stable']);
+const STABLE_MS=1500,MAX_GAP=500,INFERENCE_INTERVAL=100;
+const PEOPLE = Object.freeze([
+  {name:'汪精卫',role:'汪伪政权领导人',history:'因与日本侵略者合作而臭名昭著。',report:'系统在虚构档案中抽到了这张历史人物卡。档案管理员反复核对后，决定先给服务器做一次思想教育。温馨提示：抽签结果不负责代表你。'},
+  {name:'秦桧',role:'南宋宰相',history:'传统历史叙事中的著名奸臣。',report:'这张随机人物卡自带“历史评论区高热度”标签。档案管理员建议：本轮剧情走到这里就好，奸臣路线没有必要解锁二周目。'},
+  {name:'赵高',role:'秦朝权臣',history:'指鹿为马，专权乱政。',report:'随机档案附赠了一道动物分类题。系统本来只想查资料，最后不得不紧急下载《鹿与马的区别》。本轮娱乐报告建议选修基础生物学。'},
+  {name:'和珅',role:'清朝权臣',history:'以巨额贪腐闻名。',report:'这张随机人物卡的财富栏太长，差点撑出横向滚动条。系统正想点击“学习理财”，审计模块已经抢先打开了调查窗口。'},
+  {name:'魏忠贤',role:'明朝宦官',history:'把持朝政，排斥异己。',report:'随机档案的权限列表长得惊人，连管理员都得申请管理员权限。系统决定将这张卡移出职场培训素材，以免办公室剧情过于复杂。'},
+  {name:'严嵩',role:'明朝内阁首辅',history:'以奸臣形象著称。',report:'随机人物卡已送达。系统原想展示一份普通履历，没想到历史评论区先排起了长队。服务器正在努力寻找“关闭弹幕”按钮。'},
+  {name:'石敬瑭',role:'后晋开国皇帝',history:'因割让燕云十六州备受批评。',report:'这张随机卡刚被抽出，地图插件就弹出了“请谨慎确认领土变更”。系统建议：游戏里点确认之前，也最好先把条款读完。'},
+  {name:'董卓',role:'东汉末年权臣',history:'专权暴虐，扰乱朝政。',report:'随机档案一打开，朝堂频道便自动开启了全员禁言。服务器考虑再三，决定把这份剧情归入“管理学反面案例”，而不是领导力课程。'},
+  {name:'蒋介石',role:'中国近现代政治军事人物',history:'历史功过及政治评价存在争议。',report:'随机抽到了这张人物卡，历史讨论区随即开启超长线程。系统试图生成一句话结论，最后收到提示：争议较多，请保留上下文。'},
+  {name:'黄皓',role:'蜀汉后期宦官',history:'常被认为干预朝政。',report:'这张随机档案的消息通知比正文还多。系统准备整理朝政记录，却发现“谁能说上话”占了大半目录。建议将这段剧情当作沟通反面教材。'},
+  {"name": "陈公博", "role": "汪伪政权主要成员", "history": "曾任汪伪政权立法院院长等职，与日本侵略者合作。", "report": "随机档案刚送到，审核系统就把“合作方背景调查”标成了必修课。档案管理员表示：本轮卡牌只供历史吐槽，不提供人生参考。"},
+  {"name": "周佛海", "role": "汪伪政权主要成员", "history": "曾任汪伪政权财政部部长等职，与日本侵略者合作。", "report": "这张随机卡的财务附件还没加载完，历史审计模块已经先到了。系统决定把“看清合作对象”写进本轮虚构报告的第一页。"},
+  {"name": "溥仪", "role": "清朝末代皇帝、伪满洲国皇帝", "history": "曾在日本控制下担任伪满洲国傀儡皇帝，人生经历及后期转变复杂。", "report": "系统随机抽到一份多次切换版本的履历，年号字段差点触发格式校验。档案管理员建议：阅读完整人生记录，别只看封面上的皇冠。"},
+  {"name": "袁世凯", "role": "中华民国初期政治军事人物", "history": "曾任中华民国大总统，因复辟帝制受到批评。", "report": "随机档案显示，这张卡曾试图把共和国升级成帝国。系统检测到版本回退风险，已将“恢复旧版”按钮移出推荐操作。"},
+  {"name": "郑孝胥", "role": "伪满洲国国务总理", "history": "参与日本扶植的伪满洲国政权，曾任国务总理。", "report": "随机抽签翻出了这张档案，系统发现书法展示页与政治履历页的评分无法合并。友情提示：字写得好看，并不能替履历自动通过审核。"},
+  {"name": "李士群", "role": "汪伪政权特务头目", "history": "参与汪伪特务机构活动及“清乡”，因镇压抗日力量受到谴责。", "report": "这张随机卡刚加载，权限管理模块就要求开启全程审计。档案管理员建议：把这份虚构抽签留在娱乐页，别拿去当团队管理方案。"}
+]);
+const video=$('video'),preview=$('cameraCanvas'),previewContext=preview.getContext('2d',{willReadFrequently:true});
+const sample=document.createElement('canvas');sample.width=24;sample.height=18;
+const sampleContext=sample.getContext('2d',{willReadFrequently:true});
+let state=STATES.HOME,session=0,stream=null,detector=null,detectorPromise=null,disposed=false;
+let loopId=0,videoCallbackId=null,stageTimer=0,toastTimer=0;
+let stableSince=null,lastDetection=0,anchorBox=null,stableSamples=0,proof=null;
+let frameCount=0,decodedCount=0,previousVideoTime=-1,previousHash=null,frameRevision=0,consumedRevision=0;
+let presentedFrames=0,previousPresented=0,lastFresh=0,lastPaint=0,lastInference=0,darkSince=null,latestReadable=false;
+let cameraFacing='user',actualFacing='user',selectedDevice='',useDefaultCamera=false,renderMode='native';
+let permissionState='未知',lastError='无',lastTrackInfo='未连接',lastInferenceDuration=0;
+let analysisRun=null,humanChallenge=null,currentResult=null,imageURL=null;
+
+function setState(next,title,hint){
+  state=next;document.body.dataset.state=next;
+  const screen=CAMERA_STATES.has(next)?'camera':next===STATES.HUMAN?'analysis':next;
+  for(const id of ['home','camera','analysis','result','error'])$(id).hidden=id!==screen;
+  if(title)$('cameraStatus').textContent=title;if(hint)$('cameraHint').textContent=hint;
+  $('viewfinder').classList.toggle('good',next===STATES.STABLE||next===STATES.SUCCESS);
+  $('successCover').hidden=next!==STATES.SUCCESS;
+  for(const id of ['switchCamera','retryCamera','compatibleCamera','renderCamera','cameraDevice'])$(id).disabled=next===STATES.SUCCESS;
+  updateDiagnostics();
+}
+function updateStable(value){const n=Math.max(0,Math.min(100,value));$('stableBar').style.width=n+'%';$('stableTrack').setAttribute('aria-valuenow',Math.round(n));}
+function resetStability(){stableSince=null;lastDetection=0;anchorBox=null;stableSamples=0;updateStable(0);}
+function stopCamera(){
+  cancelAnimationFrame(loopId);loopId=0;
+  if(videoCallbackId!==null){video.cancelVideoFrameCallback?.(videoCallbackId);videoCallbackId=null;}
+  if(stream){const t=stream.getVideoTracks()[0];lastTrackInfo=t?`${t.readyState}, muted=${t.muted}, enabled=${t.enabled}`:'无视频轨道';
+    for(const track of stream.getTracks()){track.onended=null;track.onmute=null;track.stop();}stream=null;}
+  video.pause();video.srcObject=null;
+  previewContext?.setTransform(1,0,0,1,0,0);previewContext?.clearRect(0,0,preview.width,preview.height);sampleContext?.clearRect(0,0,24,18);
+  latestReadable=false;darkSince=null;resetStability();
+}
+function clearResultImage(){if(imageURL)URL.revokeObjectURL(imageURL);imageURL=null;$('savedImage').removeAttribute('src');$('savePreview').hidden=true;$('savePreview').open=false;}
+function invalidate(){easterSequence++;closeResultSheet();clearInterval(resultRedirectTimer);resultRedirectTimer=0;resourceController?.abort();$('resourcePanel').hidden=true;session++;clearTimeout(stageTimer);proof=null;analysisRun=null;humanChallenge=null;$('humanPanel').hidden=true;stopCamera();}
+function goHome(){invalidate();currentResult=null;clearResultImage();setState(STATES.HOME);}
+function fail(title,detail){lastError=title+'：'+detail;invalidate();$('errorTitle').textContent=title;$('errorDetail').textContent=detail;setState(STATES.ERROR);}
+function namedError(name,message){const e=new Error(message);e.name=name;return e;}
+function withTimeout(promise,ms,label){let id;return Promise.race([promise,new Promise((_,reject)=>{id=setTimeout(()=>reject(namedError('TimeoutError',label)),ms);})]).finally(()=>clearTimeout(id));}
+function diagnosticContext(){const p=document.permissionsPolicy||document.featurePolicy;try{return p?.allowsFeature?p.allowsFeature('camera')?'允许':'禁止':'浏览器不提供查询';}catch{return '无法查询';}}
+function updateDiagnostics(){
+  const track=stream?.getVideoTracks()[0];
+  $('securityStatus').textContent=(location.protocol==='https:'?'HTTPS 已启用':'当前协议 '+location.protocol)+' · 安全上下文'+(window.isSecureContext?'通过':'未通过');
+  $('cameraDiagnostics').textContent=[
+    '版本：2.10 / MediaPipe Tasks Vision 0.10.21','当前协议：'+location.protocol,'安全上下文：'+window.isSecureContext,
+    '摄像头接口：'+!!navigator.mediaDevices?.getUserMedia,'窗口相机策略：'+diagnosticContext(),'权限查询：'+permissionState,
+    '视频轨道：'+(track?`${track.readyState}, muted=${track.muted}, enabled=${track.enabled}`:'未连接；上次 '+lastTrackInfo),
+    '视频尺寸：'+video.videoWidth+' × '+video.videoHeight,'已接收新帧：'+frameRevision,'单次推理：'+Math.round(lastInferenceDuration)+' ms',
+    '稳定样本数：'+stableSamples,'显示方式：'+renderMode,'检测模型：'+(detector?'已加载':'未加载'),
+    '最近错误：'+lastError,'浏览器：'+navigator.userAgent
+  ].join('\n');
+}
+const RESOURCE_MANIFEST={"vision_bundle.mjs":{"bytes":137735,"sha256":"40f4123dfcd75cfa58add046919cc6f52fde66f009ff582997c09ba54c6ba27c"},"vision_wasm_internal.js":{"bytes":204284,"sha256":"4a97e2520ba506c680ecd6ba6acfb146888afa0e2746d57f205352bc6ebb82eb"},"vision_wasm_internal.wasm":{"bytes":9574032,"sha256":"f00ec4731faa23b3e714d00e88d4d10e2df5c0a427d3a2b4ae6e3526fdd14ef7"},"vision_wasm_nosimd_internal.js":{"bytes":204137,"sha256":"927def7b465c51b86e4b3060f93646aca4e27121f4b8fc0483786e407ea9cf1f"},"vision_wasm_nosimd_internal.wasm":{"bytes":9448638,"sha256":"3821ea9b1f7fb8c549ef2a064ef5c85750bf375c545a49fd6eea0df44a95f1f4"},"blaze_face_short_range.tflite":{"bytes":229746,"sha256":"b4578f35940bf5a1a655214a1cce5cab13eba73c1297cd78e1a04c2380b0152f"}};
+const RESOURCE_CACHE='past-life-mediapipe-0.10.21-verified-v1';
+let resourceController=null,resourceLoad=null;
+function resourceProgress(label){
+  if(!resourceLoad)return;
+  const {files,received,done}=resourceLoad,total=files.reduce((n,f)=>n+RESOURCE_MANIFEST[f].bytes,0),loaded=files.reduce((n,f)=>n+(received[f]||0),0);
+  const percent=Math.min(100,Math.floor(loaded/total*100));
+  $('resourcePanel').hidden=false;$('resourceLabel').textContent=label||'正在下载检测资源';$('resourcePercent').textContent=percent+'%';$('resourceBar').style.width=percent+'%';$('resourceTrack').setAttribute('aria-valuenow',percent);
+  $('resourceBytes').textContent=`${(loaded/1e6).toFixed(2)} / ${(total/1e6).toFixed(2)} MB · 已校验 ${done.size} / ${files.length} 个文件`;
+}
+async function downloadResource(name,signal){
+  const meta=RESOURCE_MANIFEST[name],url=new URL('./'+name,location.href).href,requestURL=new URL(url),pageURL=new URL(location.href);let timer,cache,response,fromCache=false;
+  // EdgeOne preview access parameters must also accompany resource requests.
+  for(const key of ['eo_token','eo_time'])if(pageURL.searchParams.has(key))requestURL.searchParams.set(key,pageURL.searchParams.get(key));
+  const abortOnStall=()=>{clearTimeout(timer);timer=setTimeout(()=>resourceController?.abort(),45000);};
+  try{
+    try{cache=await caches.open(RESOURCE_CACHE);response=await cache.match(url);fromCache=!!response;}catch{}
+    abortOnStall();
+    if(!response)response=await fetch(requestURL.href,{signal,credentials:'same-origin',cache:'default'});
+    if(!response.ok)throw new Error(name+' 下载失败，HTTP '+response.status);
+    const chunks=[];let length=0;
+    if(response.body?.getReader){
+      const reader=response.body.getReader();
+      try{while(true){signal.throwIfAborted?.();if(signal.aborted)throw namedError('AbortError','资源加载已取消');const{done,value}=await reader.read();if(done)break;abortOnStall();chunks.push(value);length+=value.byteLength;resourceLoad.received[name]=length;resourceProgress(fromCache?'正在读取已缓存资源':'正在下载本站检测资源');}}finally{reader.releaseLock();}
+    }else{const bytes=new Uint8Array(await response.arrayBuffer());chunks.push(bytes);length=bytes.byteLength;resourceLoad.received[name]=length;resourceProgress('正在读取检测资源');}
+    clearTimeout(timer);
+    if(signal.aborted)throw namedError('AbortError','资源加载已取消');
+    const bytes=new Uint8Array(length);let offset=0;for(const part of chunks){bytes.set(part,offset);offset+=part.length;}
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),n=>n.toString(16).padStart(2,'0')).join('');
+    if(length!==meta.bytes||digest!==meta.sha256){try{await cache?.delete(url);}catch{}throw new Error(name+' 完整性校验失败，请刷新重试；资源可能被截断或返回了错误页。');}
+    if(signal.aborted)throw namedError('AbortError','资源加载已取消');
+    resourceLoad.done.add(name);resourceProgress();
+    if(!fromCache&&cache){try{await cache.put(url,new Response(bytes,{headers:{'Content-Type':name.endsWith('.wasm')?'application/wasm':name.endsWith('.tflite')?'application/octet-stream':'text/javascript'}}));}catch{}}
+    return bytes;
+  }finally{clearTimeout(timer);}
+}
+function ensureDetector(){
+  if(detector){$('resourcePanel').hidden=true;return Promise.resolve(detector);}
+  if(!detectorPromise){
+    detectorPromise=(async()=>{
+      const controller=new AbortController();resourceController=controller;const urls=[];
+      resourceLoad={files:['vision_bundle.mjs','blaze_face_short_range.tflite','vision_wasm_internal.js','vision_wasm_internal.wasm'],received:{},done:new Set()};resourceProgress('正在准备检测资源');$('resourceNote').textContent='全部资源来自当前网站，无外部 CDN。下载校验后保存在本机缓存，仅缓存程序和模型。';
+      const blobURL=(bytes,type)=>{const url=URL.createObjectURL(new Blob([bytes],{type}));urls.push(url);return url;};
+      try{
+        const [script,modelAssetBuffer]=await Promise.all([downloadResource('vision_bundle.mjs',controller.signal),downloadResource('blaze_face_short_range.tflite',controller.signal)]);
+        const vision=await import(blobURL(script,'text/javascript'));
+        const simd=await vision.FilesetResolver.isSimdSupported(),base=simd?'vision_wasm_internal':'vision_wasm_nosimd_internal';
+        resourceLoad.files=['vision_bundle.mjs','blaze_face_short_range.tflite',base+'.js',base+'.wasm'];resourceProgress('正在加载本机适用的 WASM');
+        const [loader,wasm]=await Promise.all([downloadResource(base+'.js',controller.signal),downloadResource(base+'.wasm',controller.signal)]);
+        if(controller.signal.aborted)throw namedError('AbortError','资源加载已取消');
+        resourceProgress('下载完成，正在本地初始化');$('resourceNote').textContent='资源下载已完成；正在初始化本地推理引擎，此阶段不代表已检测到人脸。';
+        const task=await vision.FaceDetector.createFromOptions({wasmLoaderPath:blobURL(loader,'text/javascript'),wasmBinaryPath:blobURL(wasm,'application/wasm')},{baseOptions:{modelAssetBuffer,delegate:'CPU'},runningMode:'VIDEO',minDetectionConfidence:.65,minSuppressionThreshold:.3});
+        if(disposed||controller.signal.aborted){task.close();throw namedError('AbortError','本轮已取消');}detector=task;return task;
+      }catch(error){controller.abort();throw error;}
+      finally{for(const url of urls)URL.revokeObjectURL(url);if(resourceController===controller)resourceController=null;}
+    })().finally(()=>{detectorPromise=null;});
+  }return detectorPromise;
+}
+async function requestStream(token,constraints){
+  let expired=false;const request=navigator.mediaDevices.getUserMedia({audio:false,video:constraints});
+  request.then(s=>{if(expired||token!==session)s.getTracks().forEach(t=>t.stop());},()=>{});
+  try{const s=await withTimeout(request,30000,'等待摄像头权限超时');if(token!==session){s.getTracks().forEach(t=>t.stop());throw namedError('AbortError','本轮已取消');}return s;}
+  catch(error){expired=true;throw error;}
+}
+function startFrameWatch(token){
+  if(!video.requestVideoFrameCallback)return;
+  const callback=()=>{if(token!==session||!stream)return;presentedFrames++;videoCallbackId=video.requestVideoFrameCallback(callback);};
+  videoCallbackId=video.requestVideoFrameCallback(callback);
+}
+async function populateCameras(token){
+  try{const devices=await navigator.mediaDevices.enumerateDevices();if(token!==session)return;
+    const select=$('cameraDevice');select.replaceChildren(new Option('自动选择',''));
+    devices.filter(d=>d.kind==='videoinput').forEach((d,i)=>select.add(new Option(d.label||'摄像头 '+(i+1),d.deviceId)));
+    if(selectedDevice)select.value=selectedDevice;
+  }catch{}
+}
+function cameraError(error,stage){
+  if(error.name==='InferenceError')return ['MediaPipe 推理中断','浏览器无法执行当前 MediaPipe 图像推理。请检查 WebGL / WebAssembly 支持，或更新 Android System WebView、Chrome / Via 后重试。系统不会用其他身份推断或虚假检测替代。\n'+error.message];
+  if(stage==='model')return ['MediaPipe 无法运行','本站模型或运行库加载失败。请检查当前网站是否能正常访问，并重试。若当前 GitHub 域名在所在网络不可达，需要使用可访问的 HTTPS 托管域名；更换 CDN 无法修复网站本身不可达。浏览器需支持 WebAssembly 和 WebGL，可更新 Via 与 Android System WebView 后重试。\n'+error.name+'：'+error.message];
+  if(error.name==='NotAllowedError'||error.name==='SecurityError')return ['相机权限被拒绝','请同时允许手机系统中的浏览器相机权限，以及此网站的相机权限。Via 请检查“禁用 WebRTC”是否开启。\n'+error.name+'：'+error.message];
+  if(error.name==='NotFoundError')return ['没有可用摄像头','设备没有提供摄像头，请检查设备或选择其他摄像头。'];
+  if(error.name==='NotReadableError')return ['摄像头不可用','请关闭占用相机的应用，保持网页在前台后重试。\n'+error.message];
+  if(error.name==='BlackFrameError')return ['摄像头画面全黑或过暗','请移开遮挡、增加光线，或切换摄像头。也可点击“使用默认相机兼容启动”。\n'+error.message];
+  return ['摄像头启动或视频读取失败',error.name+'：'+error.message+'\n请展开页面底部的“查看相机诊断”获取具体状态。'];
+}
+async function startDetection(){
+  invalidate();const token=session;currentResult=null;clearResultImage();$('resultBody').hidden=true;lastError='无';permissionState='未知';
+  if(!window.isSecureContext||location.protocol==='file:')return fail('请使用 HTTPS 网站打开','请将完整 ZIP 上传到静态网站托管平台，再打开它提供的 HTTPS 地址。直接点击本地 HTML、HTTP 局域网地址或不安全的嵌入页面不能作为手机相机入口。');
+  if(!navigator.mediaDevices?.getUserMedia)return fail('浏览器没有提供相机接口','请检查 Via 的“禁用 WebRTC”设置，并使用支持网页相机的浏览器内核。');
+  if(diagnosticContext()==='禁止')return fail('当前窗口禁止相机','请从独立浏览器窗口打开 HTTPS 网址；宿主 iframe 的相机策略需要由宿主网站设置，网页无法覆盖。');
+  if(!window.WebAssembly||!previewContext||!sampleContext)return fail('浏览器缺少必要功能','需要 WebAssembly、Canvas 以及 MediaPipe 所需的图形支持。');
+  setState(STATES.PERMISSION,'正在请求摄像头权限','请允许此网站使用前置摄像头');
+  if(navigator.permissions?.query)navigator.permissions.query({name:'camera'}).then(p=>{if(token===session){permissionState=p.state;updateDiagnostics();}},()=>{});
+  let stage='camera';
+  try{
+    let incoming;const constraints=selectedDevice?{deviceId:{exact:selectedDevice}}:useDefaultCamera?true:{facingMode:'user'};
+    // 后置切换只响应用户操作；首次默认请求前置。
+    const preferred=selectedDevice||useDefaultCamera?constraints:{facingMode:cameraFacing};
+    try{incoming=await requestStream(token,preferred);}catch(error){if(token!==session)return;if(['OverconstrainedError','TypeError'].includes(error.name)&&!selectedDevice)incoming=await requestStream(token,true);else throw error;}
+    if(token!==session){incoming.getTracks().forEach(t=>t.stop());return;}
+    stream=incoming;video.muted=true;video.defaultMuted=true;video.playsInline=true;video.autoplay=true;video.srcObject=stream;
+    actualFacing=stream.getVideoTracks()[0]?.getSettings?.().facingMode||cameraFacing;
+    video.style.transform=actualFacing==='user'?'scaleX(-1)':'none';$('viewfinder').dataset.render=renderMode;
+    $('cameraBadge').textContent='本地实时检测 · 请正对镜头';
+    for(const track of stream.getVideoTracks()){
+      track.onended=()=>{if(token===session&&CAMERA_STATES.has(state)&&state!==STATES.SUCCESS)fail('摄像头连接中断','请重新启动相机并完成检测。');};
+      track.onmute=()=>{if(token===session){latestReadable=false;resetStability();}};
+    }
+    frameCount=0;decodedCount=0;previousVideoTime=-1;previousHash=null;frameRevision=0;consumedRevision=0;presentedFrames=0;previousPresented=0;
+    lastFresh=performance.now();lastPaint=0;lastInference=0;startFrameWatch(token);populateCameras(token);
+    await withTimeout(video.play(),12000,'视频预览播放超时');if(token!==session)return;lastFresh=performance.now();
+    setState(STATES.MODEL,'正在加载本地人脸模型','预览持续显示，首次加载需要下载本站模型资源');
+    loopId=requestAnimationFrame(now=>cameraTick(now,token));
+    stage='model';await withTimeout(ensureDetector(),180000,'资源加载超时，请检查网站网络连接后重试');if(token!==session)return;$('resourcePanel').hidden=true;
+    if(!stream?.getVideoTracks().some(t=>t.readyState==='live'))throw new Error('视频轨道已停止');
+    setState(STATES.WAITING,'等待检测人脸……','请将面部置于取景框内');
+  }catch(error){if(token===session){const [title,detail]=cameraError(error,stage);fail(title,detail);}}
+}
+function observePixels(now){
+  if(video.readyState<2||!video.videoWidth||!video.videoHeight)return false;
+  const w=video.videoWidth,h=video.videoHeight,scale=Math.min(1,640/w),pw=Math.max(1,Math.round(w*scale)),ph=Math.max(1,Math.round(h*scale));
+  if(preview.width!==pw||preview.height!==ph){preview.width=pw;preview.height=ph;}
+  previewContext.setTransform(actualFacing==='user'?-1:1,0,0,1,actualFacing==='user'?pw:0,0);previewContext.drawImage(video,0,0,pw,ph);
+  sampleContext.drawImage(video,0,0,24,18);const pixels=sampleContext.getImageData(0,0,24,18).data;
+  let hash=2166136261,total=0,peak=0;
+  for(let i=0;i<pixels.length;i+=4){hash=Math.imul(hash^pixels[i],16777619)^pixels[i+1]^pixels[i+2];const light=.2126*pixels[i]+.7152*pixels[i+1]+.0722*pixels[i+2];total+=light;peak=Math.max(peak,light);}
+  hash>>>=0;const decoded=video.getVideoPlaybackQuality?.().totalVideoFrames||video.webkitDecodedFrameCount||0,time=video.currentTime;
+  const changed=(presentedFrames>previousPresented)||(decoded>0&&decoded!==decodedCount)||(time>0&&time!==previousVideoTime)||(previousHash!==null&&hash!==previousHash);
+  previousPresented=presentedFrames;decodedCount=decoded;previousVideoTime=time;previousHash=hash;
+  const track=stream?.getVideoTracks()[0],live=track?.readyState==='live'&&!track.muted&&track.enabled!==false;
+  if(changed&&live){frameRevision++;lastFresh=now;}
+  if(total/(pixels.length/4)<3&&peak<14){if(darkSince===null)darkSince=now;if(now-darkSince>6000)throw namedError('BlackFrameError','连续 6 秒没有读到明亮视频帧');return false;}
+  darkSince=null;return live;
+}
+function boxIsStable(a,b){return !!a&&!!b&&Math.abs((a.originX+a.width/2)-(b.originX+b.width/2))/video.videoWidth<.10&&Math.abs((a.originY+a.height/2)-(b.originY+b.height/2))/video.videoHeight<.10&&Math.abs(a.width-b.width)/Math.max(a.width,b.width)<.30;}
+// The only success gate: results returned by the actual MediaPipe detector.
+function acceptDetections(detections,now,token){
+  if(token!==session||!DETECT_STATES.has(state))return;
+  if(detections.length!==1){resetStability();setState(detections.length>1?STATES.MULTIPLE:STATES.WAITING,detections.length>1?'检测到多张人脸':'等待检测人脸……',detections.length>1?'请确保画面中只有一人':'请将面部置于取景框内');return;}
+  const box=detections[0].boundingBox;
+  if(!box||box.width<=0||box.height<=0){resetStability();setState(STATES.WAITING,'等待检测人脸……','请正对镜头并保持光线充足');return;}
+  if(stableSince===null||now-lastDetection>MAX_GAP||!boxIsStable(anchorBox,box)){stableSince=now;anchorBox={...box};stableSamples=0;}
+  stableSamples++;lastDetection=now;setState(STATES.STABLE,'已检测到人脸','请保持面部稳定');
+  const elapsed=now-stableSince;updateStable(elapsed/STABLE_MS*100);
+  if(elapsed>=STABLE_MS&&stableSamples>=4){
+    proof={session:token};stopCamera();setState(STATES.SUCCESS,'面部检测完成','即将开始随机娱乐分析');updateStable(100);stageTimer=setTimeout(()=>beginAnalysis(token),800);
+  }
+}
+function cameraTick(now,token){
+  if(token!==session||!CAMERA_STATES.has(state)||state===STATES.SUCCESS)return;
+  if(document.hidden){fail('检测已暂停','页面进入后台后已关闭摄像头，请重新检测。');return;}
+  try{
+    if(now-lastPaint>=50){lastPaint=now;latestReadable=observePixels(now);$('cameraInfo').textContent=`${video.videoWidth} × ${video.videoHeight} · 新帧 ${frameRevision} · 本地 MediaPipe`;
+      if(!latestReadable){resetStability();if(DETECT_STATES.has(state))setState(STATES.WAITING,'等待可用相机画面','请保持光线充足，确认相机未被遮挡或禁用');}}
+    if(now-lastFresh>6000)throw namedError('VideoFrameError','6 秒内没有收到新的可用视频帧；请检查权限、WebRTC 和浏览器内核。');
+    if(stableSince!==null&&now-lastDetection>MAX_GAP){resetStability();if(DETECT_STATES.has(state))setState(STATES.WAITING,'等待检测人脸……','视频帧或推理间隔过长，请保持页面在前台');}
+    if(DETECT_STATES.has(state)&&latestReadable&&frameRevision!==consumedRevision&&now-lastInference>=INFERENCE_INTERVAL){
+      consumedRevision=frameRevision;lastInference=now;const started=performance.now();let result;
+      try{result=detector.detectForVideo(video,started);}catch(error){throw namedError('InferenceError',error.name+'：'+error.message);}
+      lastInferenceDuration=performance.now()-started;
+      // A slow inference cannot silently relax the stability interval.
+      if(lastInferenceDuration<=MAX_GAP)acceptDetections(result.detections,performance.now(),token);
+      else{resetStability();setState(STATES.WAITING,'检测速度不足，请稍候','请关闭其他页面或改用更新的 Chrome / Via 内核后重试');}
+    }
+    updateDiagnostics();
+  }catch(error){if(token===session){const [title,detail]=cameraError(error,'camera');fail(title,detail);}return;}
+  if(token===session&&CAMERA_STATES.has(state)&&state!==STATES.SUCCESS)loopId=requestAnimationFrame(t=>cameraTick(t,token));
+}
+function randomInt(max){const limit=4294967296-4294967296%max,buf=new Uint32Array(1);let n;do{crypto.getRandomValues(buf);n=buf[0];}while(n>=limit);return n%max;}
+// Only local draw history is persisted; no camera frames or facial information.
+const DRAW_KEY='past-life-draw-history-v1';
+let drawMemory=null;
+function readDrawHistory(){
+  const names=new Set(PEOPLE.map(p=>p.name));let data=drawMemory;
+  try{const saved=localStorage.getItem(DRAW_KEY);if(saved)data=JSON.parse(saved);}catch{}
+  const seen=Array.isArray(data?.seen)?[...new Set(data.seen.filter(n=>names.has(n)))]:[];
+  return{started:data?.started===true,seen,last:names.has(data?.last)?data.last:null};
+}
+function choosePerson(){
+  const history=readDrawHistory();let person;
+  if(!history.started){
+    // Exactly 89 of 100 equally likely outcomes select Chiang on the first draw.
+    const others=PEOPLE.filter(p=>p.name!=='蒋介石');
+    person=randomInt(100)<89?PEOPLE.find(p=>p.name==='蒋介石'):others[randomInt(others.length)];
+  }else{
+    let pool=PEOPLE.filter(p=>!history.seen.includes(p.name));
+    if(!pool.length){history.seen=[];pool=PEOPLE.filter(p=>p.name!==history.last);}
+    person=pool[randomInt(pool.length)];
+  }
+  drawMemory={started:true,seen:[...history.seen,person.name],last:person.name};
+  try{localStorage.setItem(DRAW_KEY,JSON.stringify(drawMemory));}catch{}
+  return person;
+}
+function makeResult(){return{mode:'video',person:choosePerson(),match:((9500+randomInt(500))/100).toFixed(2),archive:`SOUL-${1000+randomInt(9000)}-${String(randomInt(100000)).padStart(5,'0')}`};}
+function renderProgress(p){const n=Math.floor(p*100);$('percent').textContent=n+'%';$('analysisBar').style.width=n+'%';$('analysisTrack').setAttribute('aria-valuenow',n);const phases=['正在提取面部特征……','正在检索历史人物档案……','正在匹配前世身份……','发现特殊历史记录……','正在生成鉴定报告……'];$('phase').textContent=p===1?'鉴定完成':phases[Math.min(4,Math.floor(p*5))];}
+function beginAnalysis(token){if(token!==session||state!==STATES.SUCCESS||proof?.session!==token)return;preloadEasterImages();proof=null;analysisRun={token,elapsed:0,last:performance.now(),verified:false};$('humanPanel').hidden=true;$('analysisSpinner').hidden=false;setState(STATES.ANALYSIS);renderProgress(0);loopId=requestAnimationFrame(now=>analysisTick(now,token));}
+function analysisTick(now,token){
+  const run=analysisRun;if(token!==session||!run||run.token!==token||state!==STATES.ANALYSIS)return;
+  run.elapsed=Math.min(7000,run.elapsed+Math.min(100,Math.max(0,now-run.last)));run.last=now;
+  if(run.elapsed>=3850&&!run.verified){run.elapsed=3850;renderProgress(.55);setState(STATES.HUMAN);$('phase').textContent='分析已暂停，请完成人机互动验证';$('analysisSpinner').hidden=true;$('humanPanel').hidden=false;newHumanChallenge();return;}
+  renderProgress(run.elapsed/7000);if(run.elapsed<7000)loopId=requestAnimationFrame(t=>analysisTick(t,token));else stageTimer=setTimeout(()=>showResult(token),250);
+}
+function puzzleShape(ctx,x,y){
+  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+15,y);ctx.bezierCurveTo(x+10,y-13,x+34,y-13,x+29,y);ctx.lineTo(x+44,y);ctx.lineTo(x+44,y+15);ctx.bezierCurveTo(x+57,y+10,x+57,y+34,x+44,y+29);ctx.lineTo(x+44,y+44);ctx.lineTo(x,y+44);ctx.closePath();
+}
+function createPuzzleScene(){
+  const scene=document.createElement('canvas');scene.width=640;scene.height=336;const ctx=scene.getContext('2d');ctx.scale(2,2);
+  const palettes=[['#e9e5dc','#d4d8cd','#94a18e','#526b60','#f8f5ee'],['#e1e9eb','#c9d9da','#8ca9ab','#486f78','#faf5e9'],['#eee3d8','#dcc7b7','#b09683','#775f50','#fbf5eb']];const p=palettes[randomInt(palettes.length)];
+  ctx.fillStyle=p[0];ctx.fillRect(0,0,320,168);ctx.fillStyle=p[4];ctx.beginPath();ctx.arc(55+randomInt(210),35+randomInt(12),18,0,Math.PI*2);ctx.fill();
+  for(let row=0;row<3;row++){ctx.fillStyle=p[row+1];ctx.beginPath();ctx.moveTo(0,168);ctx.lineTo(0,85+row*22);for(let x=0;x<=360;x+=40)ctx.lineTo(x,65+row*24+randomInt(38));ctx.lineTo(320,168);ctx.closePath();ctx.fill();}
+  ctx.strokeStyle=p[4];ctx.lineWidth=2;ctx.globalAlpha=.55;for(let i=0;i<7;i++){const y=123+i*6;ctx.beginPath();ctx.moveTo(15+randomInt(35),y);ctx.lineTo(180+randomInt(125),y);ctx.stroke();}ctx.globalAlpha=1;
+  const bx=110+randomInt(130);ctx.fillStyle=p[4];ctx.fillRect(bx,77,38,42);ctx.beginPath();ctx.arc(bx+19,77,19,Math.PI,Math.PI*2);ctx.fill();ctx.fillStyle=p[3];ctx.fillRect(bx+12,87,14,32);
+  ctx.strokeStyle=p[3];ctx.lineWidth=3;for(const x of [20,292]){ctx.beginPath();ctx.moveTo(x,144);ctx.lineTo(x+6,99);ctx.stroke();for(let i=0;i<4;i++){ctx.beginPath();ctx.ellipse(x+(i%2?12:0),109+i*8,9,4,i%2?-.6:.6,0,Math.PI*2);ctx.fill();}}
+  return scene;
+}
+function renderPuzzle(){
+  const c=humanChallenge;if(!c)return;const ctx=$('humanPuzzle').getContext('2d'),x=8+Number($('humanRange').value)*2.56;
+  ctx.setTransform(2,0,0,2,0,0);ctx.clearRect(0,0,320,168);ctx.drawImage(c.scene,0,0,320,168);
+  puzzleShape(ctx,c.target,c.y);ctx.fillStyle='rgba(23,23,23,.42)';ctx.fill();ctx.strokeStyle='rgba(255,255,255,.85)';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.save();ctx.shadowColor='rgba(0,0,0,.3)';ctx.shadowBlur=5;puzzleShape(ctx,x,c.y);ctx.fillStyle='#fff';ctx.fill();ctx.shadowBlur=0;ctx.clip();ctx.drawImage(c.scene,x-c.target,0,320,168);ctx.restore();puzzleShape(ctx,x,c.y);ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();
+}
+function newHumanChallenge(){
+  if(state!==STATES.HUMAN||analysisRun?.token!==session)return;
+  humanChallenge={session,target:145+randomInt(105),y:40+randomInt(49),scene:createPuzzleScene(),touched:false};$('humanRange').value='0';$('humanRangeValue').textContent='向右拖动滑块 →';$('humanStatus').textContent='';renderPuzzle();
+}
+function submitHumanChallenge(){
+  const c=humanChallenge,run=analysisRun;if(state!==STATES.HUMAN||!c||c.session!==session||run?.token!==session)return false;
+  const valid=c.touched&&Math.abs(8+Number($('humanRange').value)*2.56-c.target)<=5;
+  if(!valid){$('humanStatus').textContent='拼图尚未对齐，请重新拖动。';$('humanRange').value='0';c.touched=false;$('humanRangeValue').textContent='向右拖动滑块 →';renderPuzzle();return false;}
+  run.verified=true;humanChallenge=null;$('humanPanel').hidden=true;$('analysisSpinner').hidden=false;setState(STATES.ANALYSIS);run.last=performance.now();loopId=requestAnimationFrame(t=>analysisTick(t,run.token));return true;
+}
+const RESULT_QUOTES=Object.freeze(["不愧是你，浮木没了", "解锁成就：偷吃将解石内裤", "太棒了，睾柿早苗是你的", "唐三看了沉默，小舞看了流泪", "带派不老铁"]);
+const HISTORY_VIDEOS=Object.freeze({"汪精卫":"https://www.bilibili.com/video/BV1W4Gw62ErS/","秦桧":"https://www.bilibili.com/video/BV1aJ4m1Y7Mo/","赵高":"https://www.bilibili.com/video/BV123NuzeEBt/","和珅":"https://www.bilibili.com/video/BV1id4y1x7gM/","魏忠贤":"https://www.bilibili.com/video/BV1jz4y197Sm/","严嵩":"https://www.bilibili.com/video/BV1dzui69EYV/","石敬瑭":"https://www.bilibili.com/video/BV1Js4y1G7bL/","董卓":"https://www.bilibili.com/video/BV1WzRsYREZs/","蒋介石":"https://www.bilibili.com/video/BV1y6Y76yEff/","黄皓":"https://www.bilibili.com/video/BV1SZ4y1n73v/","陈公博":"https://www.bilibili.com/list/34603527?bvid=BV1vw4m1a7pb&oid=1106026947","周佛海":"https://www.bilibili.com/video/BV17K411i7jR","溥仪":"https://www.bilibili.com/video/BV17t41147mF/","袁世凯":"https://www.bilibili.com/video/BV1GA411q7M2/","郑孝胥":"https://www.bilibili.com/video/BV1k6P1z4EQj/","李士群":"https://www.bilibili.com/video/BV1Tx411q7pt/"});
+const EASTER_IMAGE_GROUPS=Object.freeze([['./easter-1.webp','./easter-2.webp'],['./easter-3.webp','./easter-4.webp'],['./easter-5.webp','./easter-6.webp'],['./easter-7.png','./easter-8.png'],['./easter-9.jpg','./easter-10.jpg','./easter-11.webp']]);
+let resultRedirectTimer=0,easterPreloads=null,easterSequence=0;
+function preloadEasterImages(){if(easterPreloads)return;easterPreloads=EASTER_IMAGE_GROUPS.flat().map(src=>{const image=new Image();image.src=src;return image;});}
+function positionResultCard(){
+  const card=$('resultEaster'),vp=window.visualViewport,w=vp?.width||window.innerWidth,h=vp?.height||window.innerHeight,ox=vp?.offsetLeft||0,oy=vp?.offsetTop||0;
+  const cw=card.offsetWidth||Math.min(360,w-24),ch=card.offsetHeight||Math.min(300,h*.35);
+  card.style.setProperty('--card-left',(ox+Math.max(12,(w-cw)/2))+'px');card.style.setProperty('--card-top',(oy+Math.max(12,(h-ch)/2))+'px');
+}
+function openResultSheet(){
+  if(state!==STATES.RESULT||!currentResult)return;const sheet=$('resultEaster');
+  if(!sheet.open){sheet.dataset.edge='bottom';if(typeof sheet.show==='function')sheet.show();else sheet.setAttribute('open','');document.body.classList.add('easter-visible');positionResultCard();$('personName').scrollIntoView?.({behavior:'smooth',block:'center'});}
+}
+function closeResultSheet(){
+  document.body.classList.remove('easter-visible');const sheet=$('resultEaster');if(sheet.open&&typeof sheet.close==='function')sheet.close();else sheet.removeAttribute('open');
+}
+function cancelResultRedirect(message='已取消自动跳转，可继续保存结果。'){
+  easterSequence++;clearTimeout(stageTimer);
+  clearInterval(resultRedirectTimer);resultRedirectTimer=0;
+  $('redirectStatus').textContent=message;$('redirectBar').style.width='0%';$('stayResult').hidden=true;closeResultSheet();
+}
+const EASTER_FIRST_KEY='past-life-easter-first-v1';
+let easterHasAppeared=false;
+function hasSeenEaster(){try{return easterHasAppeared||localStorage.getItem(EASTER_FIRST_KEY)==='1';}catch{return easterHasAppeared;}}
+function markEasterAppeared(){easterHasAppeared=true;try{localStorage.setItem(EASTER_FIRST_KEY,'1');}catch{}}
+function chooseEasterQuoteIndex(){
+  if(hasSeenEaster())return randomInt(5);
+  const roll=randomInt(10000);return roll<8500?2:roll<8875?0:roll<9250?1:roll<9625?3:4;
+}
+async function beginResultEaster(token){
+  const sequence=++easterSequence;
+  clearInterval(resultRedirectTimer);resultRedirectTimer=0;
+  if(token!==session||state!==STATES.RESULT||!currentResult)return;
+  const person=currentResult.person,quoteIndex=chooseEasterQuoteIndex(),quote=RESULT_QUOTES[quoteIndex],url=HISTORY_VIDEOS[person.name],images=EASTER_IMAGE_GROUPS[quoteIndex],image=$('easterImage');
+  image.hidden=!images.length;image.onerror=()=>{image.hidden=true;};
+  if(images.length){image.src=images[randomInt(images.length)];image.alt='第 '+(quoteIndex+1)+' 条彩蛋的随机配图';if(image.decode){try{await withTimeout(image.decode(),8000,'配图加载超时');}catch{image.hidden=true;}}}else image.removeAttribute('src');
+  if(sequence!==easterSequence||token!==session||state!==STATES.RESULT||!currentResult)return;
+  $('resultQuote').replaceChildren(...Array.from(quote,(char,i)=>{const span=document.createElement('span');span.textContent=char;span.style.setProperty('--i',i);return span;}));
+  $('resultQuote').setAttribute('aria-label',quote);$('historyVideo').href=url;$('historyVideo').textContent='查看 '+person.name+' 的哔哩哔哩介绍 ↗';$('stayResult').hidden=false;
+  const started=performance.now();$('redirectStatus').textContent='5 秒后打开 '+person.name+' 的人物介绍';$('redirectBar').style.width='100%';openResultSheet();markEasterAppeared();
+  const tick=()=>{
+    if(token!==session||state!==STATES.RESULT||document.hidden){cancelResultRedirect('自动跳转已暂停，请点击介绍链接查看。');return;}
+    const left=Math.max(0,5000-(performance.now()-started));$('redirectStatus').textContent=Math.ceil(left/1000)+' 秒后打开 '+person.name+' 的人物介绍';$('redirectBar').style.width=(left/50)+'%';
+    if(left===0){clearInterval(resultRedirectTimer);resultRedirectTimer=0;$('redirectStatus').textContent='正在打开哔哩哔哩…';location.assign(url);}
+  };
+  resultRedirectTimer=setInterval(tick,100);
+}
+function showResult(token){
+  if(token!==session||state!==STATES.ANALYSIS||!analysisRun?.verified||analysisRun.elapsed<7000)return;
+  currentResult=makeResult();const{person,match,archive}=currentResult;$('personName').textContent=person.name;$('identity').textContent='前世身份：'+person.role;$('matchValue').textContent=match;$('reportText').textContent=person.report;$('history').textContent='历史评价：'+person.history;$('archive').textContent=archive;$('verificationMode').textContent='验证方式：本地 MediaPipe 实时人脸检测';$('resultBody').hidden=true;setState(STATES.RESULT);
+  stageTimer=setTimeout(()=>{if(token===session&&state===STATES.RESULT){$('resultBody').hidden=false;$('resultBody').classList.remove('reveal');void $('resultBody').offsetWidth;$('resultBody').classList.add('reveal');stageTimer=setTimeout(()=>{if(token===session&&state===STATES.RESULT&&!document.hidden)beginResultEaster(token);},2000);}},1000);
+}
+function toast(message){clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>{$('toast').hidden=true;},4000);}
+function wrapText(ctx,text,x,y,width,lineHeight){
+  let line='';for(const char of text){if(ctx.measureText(line+char).width>width&&line){ctx.fillText(line,x,y);y+=lineHeight;line=char;}else line+=char;}if(line)ctx.fillText(line,x,y);return y+lineHeight;
+}
+function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function resultCanvas(result){
+  // 只绘制文字报告，不读取 video，也不生成面部截图。
+  const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1580;const c=canvas.getContext('2d');if(!c)throw new Error('浏览器不支持图片生成');
+  c.scale(2,2);c.fillStyle='#fafafa';c.fillRect(0,0,540,790);const font='-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif';
+  c.textAlign='center';c.fillStyle='#888';c.font=`11px ${font}`;c.fillText('PAST LIFE · AI / 随机娱乐报告',270,53);
+  c.fillStyle='#171717';c.font=`600 23px ${font}`;c.fillText('AI 前世身份鉴定',270,94);
+  c.fillStyle='#888';c.font=`14px ${font}`;c.fillText('你的前世身份是',270,152);
+  c.fillStyle='#171717';c.font=`700 60px ${font}`;c.fillText(result.person.name,270,229);
+  c.fillStyle='#777';c.font=`13px ${font}`;c.fillText('前世身份：'+result.person.role,270,270);
+  c.fillStyle='#888';c.font=`12px ${font}`;c.fillText('灵魂匹配度',270,319);c.fillStyle='#171717';c.font=`36px ${font}`;c.fillText(result.match+'%',270,366);c.fillStyle='#aaa';c.font=`10px ${font}`;c.fillText('虚构娱乐数值 · 与面部无关',270,391);
+  c.fillStyle='#f0f0f0';roundRect(c,38,420,464,219,20);c.fill();c.textAlign='left';c.fillStyle='#171717';c.font=`600 14px ${font}`;c.fillText('前世鉴定报告',61,452);
+  c.fillStyle='#777';c.font=`13px ${font}`;const y=wrapText(c,result.person.report,61,482,418,24);c.font=`11px ${font}`;wrapText(c,'历史评价：'+result.person.history,61,Math.max(y+12,582),418,20);
+  c.textAlign='center';c.fillStyle='#888';c.font=`10px ${font}`;c.fillText('前世档案编号',270,674);c.font='13px monospace';c.fillText(result.archive,270,698);
+  c.font=`10px ${font}`;c.fillText(result.mode==='photo'?'验证方式：照片人脸检测（非实时）':'验证方式：实时人脸稳定检测',270,720);c.fillText('本结果由随机算法生成，仅供娱乐。',270,744);c.fillText('不代表真实人物身份、性格或政治立场。',270,763);return canvas;
+}
+async function saveResult(){
+  cancelResultRedirect();
+  if(state!==STATES.RESULT||!currentResult)return;
+  const token=session,result=currentResult;$('save').disabled=true;
+  try{
+    const canvas=resultCanvas(result),blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('无法生成图片')),'image/png'));
+    if(token!==session||currentResult!==result)return;
+    clearResultImage();imageURL=URL.createObjectURL(blob);$('savedImage').src=imageURL;$('savePreview').hidden=false;
+    const file=new File([blob],`${result.archive}.png`,{type:'image/png'});
+    // 移动 Safari 可通过系统分享面板存储；不支持时下载并提供长按图片。
+    if(navigator.canShare?.({files:[file]})){
+      try{await navigator.share({files:[file],title:'AI 前世身份鉴定（随机娱乐）'});return;}
+      catch(error){if(error.name==='AbortError')return;}
+    }
+    const a=document.createElement('a');a.href=imageURL;a.download=file.name;document.body.append(a);a.click();a.remove();toast('已生成图片；若未下载，可展开图片长按保存');
+  }catch(error){toast('保存失败：'+error.message);}finally{$('save').disabled=false;}
+}
+
+$('start').addEventListener('click',startDetection);$('restart').addEventListener('click',startDetection);$('retry').addEventListener('click',startDetection);
+$('switchCamera').addEventListener('click',()=>{cameraFacing=cameraFacing==='user'?'environment':'user';selectedDevice='';useDefaultCamera=false;startDetection();});$('switchAfterError').addEventListener('click',()=>{cameraFacing=cameraFacing==='user'?'environment':'user';selectedDevice='';useDefaultCamera=false;startDetection();});
+function startCompatibleCamera(){selectedDevice='';useDefaultCamera=true;startDetection();}
+$('compatibleCamera').addEventListener('click',startCompatibleCamera);$('compatAfterError').addEventListener('click',startCompatibleCamera);$('retryCamera').addEventListener('click',startDetection);
+$('cameraDevice').addEventListener('change',event=>{selectedDevice=event.target.value;useDefaultCamera=false;startDetection();});
+$('renderCamera').addEventListener('click',()=>{renderMode=renderMode==='native'?'canvas':'native';$('viewfinder').dataset.render=renderMode;updateDiagnostics();});
+$('cancel').addEventListener('click',goHome);$('back').addEventListener('click',goHome);$('save').addEventListener('click',saveResult);
+window.addEventListener('resize',()=>{if($('resultEaster').open)positionResultCard();});
+$('showEaster').addEventListener('click',openResultSheet);$('dismissEaster').addEventListener('click',()=>cancelResultRedirect());$('resultEaster').addEventListener('cancel',e=>{e.preventDefault();cancelResultRedirect();});$('resultEaster').addEventListener('click',e=>{if(e.target!==$('resultEaster'))return;const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)cancelResultRedirect();});
+$('stayResult').addEventListener('click',()=>cancelResultRedirect());$('historyVideo').addEventListener('click',()=>cancelResultRedirect('正在打开人物介绍…'));
+$('humanVerify').addEventListener('click',submitHumanChallenge);$('humanRefresh').addEventListener('click',newHumanChallenge);$('humanCancel').addEventListener('click',goHome);
+$('humanRange').addEventListener('input',()=>{if(state!==STATES.HUMAN||!humanChallenge)return;humanChallenge.touched=true;$('humanStatus').textContent='';$('humanRangeValue').textContent='松开滑块完成验证';renderPuzzle();});$('humanRange').addEventListener('change',submitHumanChallenge);
+$('copyDiagnostics').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('cameraDiagnostics').textContent);toast('诊断已复制');}catch{toast('请长按复制诊断文字，或截图');}});
+if(/Android/i.test(navigator.userAgent)){$('openChrome').hidden=false;$('openChrome').addEventListener('click',()=>{const u=new URL(location.href);location.href=`intent://${u.host}${u.pathname}${u.search}#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(u.href)};end`;});}
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&resultRedirectTimer)cancelResultRedirect('自动跳转已暂停，请点击介绍链接查看。');if(document.hidden&&CAMERA_STATES.has(state))fail('检测已暂停','进入后台后已释放相机，请重新检测。');if(!document.hidden&&analysisRun)analysisRun.last=performance.now();});
+window.addEventListener('pagehide',event=>{const oldState=state;invalidate();if(CAMERA_STATES.has(oldState)||oldState===STATES.ANALYSIS||oldState===STATES.HUMAN){$('errorTitle').textContent='鉴定已暂停';$('errorDetail').textContent='页面离开后已释放资源，请重新鉴定。';setState(STATES.ERROR);}else if(oldState===STATES.RESULT)$('resultBody').hidden=false;if(!event.persisted){disposed=true;try{detector?.close();}catch{}detector=null;clearResultImage();}});
+window.addEventListener('pageshow',()=>{disposed=false;});setState(STATES.HOME);
+
+</script>
+</body>
+</html>
