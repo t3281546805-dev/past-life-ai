@@ -13,6 +13,7 @@
 /* Result stays readable while the non-modal easter card is open. */
 .result-easter{top:auto;left:max(12px,env(safe-area-inset-left));bottom:calc(12px + env(safe-area-inset-bottom));width:min(360px,calc(100vw - 24px));max-height:35vh;max-height:35dvh;padding:16px 18px;overscroll-behavior:contain;border-radius:24px;z-index:1000}.result-easter[data-side=right]{left:auto;right:max(12px,env(safe-area-inset-right))}.result-easter::backdrop{background:transparent}.result-easter[data-edge=bottom]{--enter-x:0px;--enter-y:45vh}.easter-label{margin-bottom:8px}.easter-image{height:100px}.easter-quote{font-size:17px;margin:10px 0}.history-link{margin-top:10px;padding:9px}.result-easter .fine{margin-top:6px}body:has(.result-easter[open]){overflow:auto}body.easter-visible #result{padding-bottom:calc(35vh + 32px);padding-bottom:calc(35dvh + 32px)}
 .result-easter,.result-easter[data-side=right]{top:var(--card-top,50%);left:var(--card-left,50%);bottom:auto;right:auto}body.easter-visible #result{padding-bottom:30px}
+#stayResult{position:absolute;top:8px;right:12px;margin:0;padding:6px 10px;border-radius:20px;background:#EDF1E3;color:#466443;font-size:11px}.easter-label{margin-right:90px}
 </style>
 </head>
 <body>
@@ -61,7 +62,7 @@
   </main>
   <footer><div class="footer-line"><span>AI 前世身份鉴定</span><span>仅供娱乐 · 结果随机 · 面部数据不上传</span><details class="support-details"><summary>帮助与诊断</summary><p id="securityStatus"></p><pre id="cameraDiagnostics"></pre><button id="copyDiagnostics" class="text-button">复制诊断</button><a href="./" target="_blank" rel="noopener">在浏览器打开 ↗</a></details></div></footer>
 </div>
-<dialog id="resultEaster" class="result-easter" aria-labelledby="resultQuote" aria-describedby="redirectStatus"><button id="dismissEaster" hidden class="sheet-close" aria-label="关闭彩蛋并取消自动跳转">×</button><p class="easter-label">随机彩蛋</p><img id="easterImage" class="easter-image" alt="本条随机彩蛋的配图" hidden><p id="resultQuote" class="easter-quote" aria-label="随机娱乐彩蛋"></p><p id="redirectStatus" class="fine">5 秒后打开人物介绍</p><div class="redirect-progress" aria-hidden="true"><span id="redirectBar"></span></div><a id="historyVideo" class="history-link" rel="noreferrer">立即查看哔哩哔哩人物介绍 ↗</a><button id="stayResult" class="text-button">留在此页，取消跳转</button></dialog>
+<dialog id="resultEaster" class="result-easter" aria-labelledby="resultQuote" aria-describedby="redirectStatus"><button id="dismissEaster" hidden class="sheet-close" aria-label="关闭彩蛋并取消自动跳转">×</button><p class="easter-label">随机彩蛋</p><img id="easterImage" class="easter-image" alt="本条随机彩蛋的配图" hidden><p id="resultQuote" class="easter-quote" aria-label="随机娱乐彩蛋"></p><p id="redirectStatus" class="fine">5 秒后打开人物介绍</p><div class="redirect-progress" aria-hidden="true"><span id="redirectBar"></span></div><a id="historyVideo" class="history-link" rel="noreferrer">立即查看哔哩哔哩人物介绍 ↗</a><button id="stayResult" class="text-button">取消跳转</button></dialog>
 <div id="toast" class="toast" hidden role="status"></div>
 
 <noscript><p style="text-align:center">请启用 JavaScript 后使用。此网页需要真实人脸检测。</p></noscript>
