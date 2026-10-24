@@ -138,7 +138,7 @@ function updateDiagnostics(){
   const track=stream?.getVideoTracks()[0];
   $('securityStatus').textContent=(location.protocol==='https:'?'HTTPS 已启用':'当前协议 '+location.protocol)+' · 安全上下文'+(window.isSecureContext?'通过':'未通过');
   $('cameraDiagnostics').textContent=[
-    '版本：2.10 / MediaPipe Tasks Vision 0.10.21','当前协议：'+location.protocol,'安全上下文：'+window.isSecureContext,
+    '版本：2.11 / MediaPipe Tasks Vision 0.10.21','当前协议：'+location.protocol,'安全上下文：'+window.isSecureContext,
     '摄像头接口：'+!!navigator.mediaDevices?.getUserMedia,'窗口相机策略：'+diagnosticContext(),'权限查询：'+permissionState,
     '视频轨道：'+(track?`${track.readyState}, muted=${track.muted}, enabled=${track.enabled}`:'未连接；上次 '+lastTrackInfo),
     '视频尺寸：'+video.videoWidth+' × '+video.videoHeight,'已接收新帧：'+frameRevision,'单次推理：'+Math.round(lastInferenceDuration)+' ms',
@@ -428,7 +428,7 @@ async function beginResultEaster(token){
 function showResult(token){
   if(token!==session||state!==STATES.ANALYSIS||!analysisRun?.verified||analysisRun.elapsed<7000)return;
   currentResult=makeResult();const{person,match,archive}=currentResult;$('personName').textContent=person.name;$('identity').textContent='前世身份：'+person.role;$('matchValue').textContent=match;$('reportText').textContent=person.report;$('history').textContent='历史评价：'+person.history;$('archive').textContent=archive;$('verificationMode').textContent='验证方式：本地 MediaPipe 实时人脸检测';$('resultBody').hidden=true;setState(STATES.RESULT);
-  stageTimer=setTimeout(()=>{if(token===session&&state===STATES.RESULT){$('resultBody').hidden=false;$('resultBody').classList.remove('reveal');void $('resultBody').offsetWidth;$('resultBody').classList.add('reveal');stageTimer=setTimeout(()=>{if(token===session&&state===STATES.RESULT&&!document.hidden)beginResultEaster(token);},2000);}},1000);
+  stageTimer=setTimeout(()=>{if(token===session&&state===STATES.RESULT){$('resultBody').hidden=false;$('resultBody').classList.remove('reveal');void $('resultBody').offsetWidth;$('resultBody').classList.add('reveal');stageTimer=setTimeout(()=>{if(token===session&&state===STATES.RESULT&&!document.hidden)beginResultEaster(token);},1000);}},1000);
 }
 function toast(message){clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>{$('toast').hidden=true;},4000);}
 function wrapText(ctx,text,x,y,width,lineHeight){
